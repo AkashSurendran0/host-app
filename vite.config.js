@@ -8,10 +8,19 @@ export default defineConfig({
     react(),
     federation({
       remotes:{
-        homeApp:'http://localhost:3000/assets/remoteEntry.js',
-        userApp:'http://localhost:3001/assets/remoteEntry.js'
+        homeApp:'https://home-42it5fhst-akashsurendran0s-projects.vercel.app/assets/remoteEntry.js',
+        userApp:'https://user-bj0ep21oa-akashsurendran0s-projects.vercel.app/assets/remoteEntry.js'
       },
-      shared:['react', 'react-dom']
+      shared: {
+        react: {
+          external: 'React',
+          requiredVersion: '^18.0.0',
+        },
+        'react-dom': {
+          external: 'ReactDOM',
+          requiredVersion: '^18.0.0',
+        },
+      }
     })
   ],
   build:{
