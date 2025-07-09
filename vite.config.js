@@ -8,8 +8,8 @@ export default defineConfig({
     react(),
     federation({
       remotes:{
-        homeApp:'https://home-42it5fhst-akashsurendran0s-projects.vercel.app/assets/remoteEntry.js',
-        userApp:'https://user-bj0ep21oa-akashsurendran0s-projects.vercel.app/assets/remoteEntry.js'
+        homeApp:'https://home-app-five.vercel.app/assets/remoteEntry.js',
+        userApp:'https://user-app-iota-one.vercel.app/assets/remoteEntry.js'
       },
       shared: {
         react: {
